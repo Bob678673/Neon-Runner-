@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Neon Runner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-wrapper">
+
+        <div class="game-container">
+
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- ==============================
+                 HUD
+            =============================== -->
+
+            <div id="hud" class="hud">
+
+                <div class="score-box">
+                    SCORE
+                    <span id="scoreValue">0</span>
+                </div>
+
+                <div class="coin-box">
+                    🪙
+                    <span id="coinValue">0</span>
+                </div>
+
+                <div class="level-box">
+                    LEVEL
+                    <span id="levelValue">1</span>
+                </div>
+
+                <button id="homeButton" class="home-button">
+                    🏠
+                </button>
+
+            </div>
+
+
+            <!-- ==============================
+                 POWER UPS
+            =============================== -->
+
+            <div id="powerUpDisplay" class="power-up-display"></div>
+
+
+            <!-- ==============================
+                 HOME
+            =============================== -->
+
+            <div id="homeScreen" class="screen">
+
+                <div class="menu-box home-box">
+
+                    <div class="logo">
+                        <div>NEON</div>
+                        <span>RUNNER</span>
+                    </div>
+
+                    <p class="subtitle">
+                        RUN • JUMP • COLLECT
+                    </p>
+
+                    <div class="home-coins">
+                        🪙 <span id="homeCoinValue">0</span>
+                    </div>
+
+                    <button id="playButton" class="main-button">
+                        PLAY
+                    </button>
+
+                    <button id="shopButton" class="secondary-button">
+                        SHOP
+                    </button>
+
+                    <p class="controls">
+                        SPACE / TAP = SPRINGEN
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 SHOP
+            =============================== -->
+
+            <div id="shopScreen" class="screen hidden">
+
+                <div class="shop-box">
+
+                    <div class="shop-header">
+
+                        <button id="shopBackButton" class="small-button">
+                            ←
+                        </button>
+
+                        <h2>SHOP</h2>
+
+                        <div class="shop-coins">
+                            🪙 <span id="shopCoinValue">0</span>
+                        </div>
+
+                    </div>
+
+
+                    <p class="shop-subtitle">
+                        WÄHLE DEINEN RUNNER
+                    </p>
+
+
+                    <div id="skinGrid" class="skin-grid"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 PAUSE
+            =============================== -->
+
+            <div id="pauseScreen" class="screen hidden">
+
+                <div class="menu-box">
+
+                    <h2>PAUSE</h2>
+
+                    <button id="resumeButton" class="main-button">
+                        WEITER
+                    </button>
+
+                    <button id="pauseRestartButton" class="secondary-button">
+                        NEUSTART
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 GAME OVER
+            ============================== -->
+
+            <div id="gameOverScreen" class="screen hidden">
+
+                <div class="menu-box">
+
+                    <h2>GAME OVER</h2>
+
+                    <div class="result">
+
+                        <p>
+                            SCORE
+                            <strong id="finalScore">0</strong>
+                        </p>
+
+                        <p>
+                            🪙 MÜNZEN
+                            <strong id="finalCoins">0</strong>
+                        </p>
+
+                        <p>
+                            LEVEL
+                            <strong id="finalLevel">1</strong>
+                        </p>
+
+                        <p>
+                            BEST
+                            <strong id="gameOverHighScore">0</strong>
+                        </p>
+
+                    </div>
+
+                    <button id="restartButton" class="main-button">
+                        RESTART
+                    </button>
+
+                    <button id="gameOverHomeButton" class="secondary-button">
+                        HOME
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 MOBILE BUTTONS
+            =============================== -->
+
+            <div id="mobileControls" class="mobile-controls">
+
+                <button id="slideButton">
+                    SLIDE
+                </button>
+
+                <button id="jumpButton">
+                    JUMP
+                </button>
+
+                <button id="dashButton">
+                    DASH
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="game.js"></script>
+<script src="addon.js"></script>
+</body>
+</html>
+<script src="game.js"></script>
+<script src="addon.js"></script>
+<script src="addon2.js"></script>
+<script src="addon3.js"></script>   <!-- NEU -->
+<script>PokiSDK.init().catch(() => {});</script>
